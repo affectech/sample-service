@@ -1,6 +1,6 @@
 FROM python:3.13-alpine
 
-WORKDIR /service/squad
+WORKDIR /service/sample
 
 COPY . .
 

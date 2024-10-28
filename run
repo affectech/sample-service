@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+alembic upgrade head
+fastapi run ./service/main.py --port 80

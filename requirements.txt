@@ -1,0 +1,17 @@
+alembic==1.13.3
+email_validator==2.2.0
+fastapi==0.115.2
+fastapi-cli==0.0.5
+httptools==0.6.4
+httpx==0.27.2
+Jinja2==3.1.4
+pip==24.2
+psycopg==3.2.3
+psycopg-binary==3.2.3
+psycopg-pool==3.2.3
+python-dotenv==1.0.1
+python-multipart==0.0.12
+PyYAML==6.0.2
+sqlmodel==0.0.22
+watchfiles==0.24.0
+websockets==13.1

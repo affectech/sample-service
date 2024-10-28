@@ -1,0 +1,23 @@
+# ФАЙЛ ДЛЯ ОТДЕЛЬНОГО ТЕСТИРОВАНИЯ СЕРВИСА
+
+services:
+  squad-service:
+    env_file: 
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    build: .
+
+  db:
+    image: postgres:17-alpine
+    ports:
+      - 5555:5432
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 2s
+      retries: 5

@@ -1,19 +1,18 @@
-from typing import Union, Optional
-from pydantic import BaseModel
 from fastapi import FastAPI
 
-app = FastAPI()
+from .rpc import RPCCall, RPCReply
 
-class RPCCall(BaseModel):
-    jsonrpc: str
-    method: str
-    params: Optional[list[str]]
-    id: Optional[str]
+app = FastAPI()
 
 @app.get("/endpoint")
 def read_endpoint():
     return {"Hello": "Endpoint"}
 
-@app.post("/rpc")
+@app.post("/rpc", response_model=RPCReply)
 def read_rpc_call(call: RPCCall):
-    return call 
+    return RPCReply(
+        jsonrpc="2.0", 
+        result={"hello": "world"}, 
+        error=None, 
+        id=call.id
+    ) 

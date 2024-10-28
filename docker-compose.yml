@@ -8,6 +8,8 @@ services:
       db:
         condition: service_healthy
     build: .
+    volumes:
+      - ./service:/service/sample/service
 
   db:
     image: postgres:17-alpine

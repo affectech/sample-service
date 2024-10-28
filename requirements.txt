@@ -9,6 +9,7 @@ pip==24.2
 psycopg==3.2.3
 psycopg-binary==3.2.3
 psycopg-pool==3.2.3
+pytest==8.3.3
 python-dotenv==1.0.1
 python-multipart==0.0.12
 PyYAML==6.0.2

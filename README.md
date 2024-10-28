@@ -1,6 +1,9 @@
 Для комфортной разработки поставьте virtualenv:
 ```sh
 python -m venv venv/
+./venv/bin/activate
+# Если пользуетесь VSCode и уже выбрали интерпретатор, терминал в редакторе будет уже настроен на virtualenv
+
 # внутри venv
 pip install -r requirements.txt
 ```

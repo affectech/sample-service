@@ -11,6 +11,11 @@ pip install -r requirements.txt
 ```sh
 docker compose up
 ```
+если нет 
+```
+fastapi dev ./service/main.py
+```
+
 для тестирования, запускаем команду в virtualenv:
 ```sh
 pytest

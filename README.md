@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ```sh
 docker compose up
 ```
-если нет 
+если нет, внутри virtual environment
 ```
 fastapi dev ./service/main.py
 ```
